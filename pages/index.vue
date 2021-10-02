@@ -1,8 +1,7 @@
 <template>
   <v-row justify="center" align="center" class="bodyCarta">
     <v-row>
-      <v-col class="pb-0">
-        <div cols="12" class="grey darken-4 text-center">
+        <v-col cols="12" class="grey darken-4 text-center pb-0">
           <a
             href="http://instagram.com/notoriousjazzcafe"
             target="_blank"
@@ -15,20 +14,15 @@
             class="tdn white--text"
             >i a Google Maps</a
           >
-        </div>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col class="pt-0">
-        <div cols="12" class="green text-center">
+        </v-col>
+        <v-col cols="12" class="green text-center pt-0 pb-0">
           <a
             href="https://notoriousjazzcafe.com/carta"
             target="_blank"
             class="tdn white--text"
             >Consulta la nostra carta</a
           >
-        </div>
-      </v-col>
+        </v-col>
     </v-row>
     <v-row>
       <v-col cols="12">
