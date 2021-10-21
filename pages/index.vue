@@ -34,7 +34,10 @@
             src="https://notoriousjazzcafe.com/assets/Logo.jpg"
           ></v-img>
         </v-card>
-        <h1 class="text-center">Reservar</h1>
+        <h1 class="text-center">Reservar taula</h1>
+        <h2 class="text-center">Notorious Jazz Café</h2>
+        <br>
+        <p class="text-center">Si prefereixes reservar taula al Notorious Piano Bar, clica aquí.</p>
         <v-col cols="12">
           <v-form v-model="valid" ref="form" lazy-validation>
             <v-container>
@@ -118,7 +121,7 @@
                   <small>Sols acceptem reserves per a dinars o sopars.</small>
                 </v-col>
 
-                <!-- Preferència -->
+                <!-- Preferència taula -->
                 <v-col cols="12">
                   <v-radio-group
                     v-model="select"
@@ -162,6 +165,7 @@
                 </v-col>
 
                 <!-- Telèfon -->
+                <!--
                 <v-col cols="12">
                   <v-row>
                     <v-col cols="4" class="pr-1">
@@ -195,6 +199,17 @@
                       ></v-text-field>
                     </v-col>
                   </v-row>
+                </v-col> -->
+
+                <v-col cols="12">
+                  <v-text-field
+                        v-model="phone"
+                        :rules="phoneRules"
+                        :type="'number'"
+                        label="Telèfon mòbil"
+                        required
+                      ></v-text-field>
+                      <small>Si el teu telèfon és internacional, siusplau, indica-hi el prefix.</small>
                 </v-col>
 
                 <!-- Observacions -->
@@ -431,8 +446,13 @@
                     motius).</small
                   >
                 </v-col>
-
+<!--
                 <v-col cols="12"> </v-col>
+-->
+                <v-col cols="12">
+                  <v-icon>mdi-check-circle</v-icon> Un cop rebem les teves dades, t'enviarem un missatge per correu electrònic si la teva reserva ha estat confirmada.<br>
+                  <v-icon>mdi-check-circle</v-icon> Si finalment no pots assistir a la teva reserva, si us plau, contacta amb nosaltres per a cancel·lar-la.
+                </v-col>
 
                 <v-col cols="12">
                   <!-- SUBMIT -->
